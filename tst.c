@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:05:57 by ehande            #+#    #+#             */
-/*   Updated: 2021/04/13 14:15:50 by ehande           ###   ########.fr       */
+/*   Updated: 2021/04/13 15:15:50 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ int main(void)
 {
     char    **dbl;
     char    *line;
+    int i;
 
-    dbl = new_2d();
-    add_f_line(&dbl, get_line("a"));
+    i = 0;
+    dbl = new_2d(20);
     
-    printf("%s\n", dbl[0]);
-    printf("%s\n", dbl[1]);
-    
-    dl_l_line(&dbl);
-    add_l_line(&dbl, get_line("a"));
-    dl_f_line(&dbl);
-    while(1);
+    while(dbl[i] == NULL)
+        printf("%s\n", dbl[i++]);
     return (0);
 }
