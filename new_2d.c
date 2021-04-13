@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 12:51:28 by ehande            #+#    #+#             */
-/*   Updated: 2021/04/13 15:12:54 by ehande           ###   ########.fr       */
+/*   Updated: 2021/04/13 15:18:44 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char **new_2d(int i)
     char **out;
 
     if (i < 1)
-        i = 0;
+        i = 1;
     out = (char**)malloc(sizeof(char*) * i);
     while (i--)
         out[i] = NULL;
