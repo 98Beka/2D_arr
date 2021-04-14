@@ -2,8 +2,10 @@ NAME = 2d_arr.a
 
 HDRS = ./
 
-SRCS = add_line.c new_2d.c free_2d.c dl_line.c
-
+SRCS =	free_2d.c new_2d.c\
+		add_line.c dl_line.c\
+		add_char.c dl_char.c\
+		make_line.c
 OBJS = $(SRCS:.c=.o)
 
 CC = @gcc -Wall -Wextra -Werror

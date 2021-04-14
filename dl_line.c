@@ -6,11 +6,11 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:13:25 by ehande            #+#    #+#             */
-/*   Updated: 2021/04/13 14:15:27 by ehande           ###   ########.fr       */
+/*   Updated: 2021/04/14 21:00:05 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "2d_arr.h"
+#include "ft_arr.h"
 
 int dl_f_line(char ***input)
 {

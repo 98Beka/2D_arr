@@ -5,32 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 13:05:57 by ehande            #+#    #+#             */
-/*   Updated: 2021/04/13 15:15:50 by ehande           ###   ########.fr       */
+/*   Created: 2021/04/14 21:04:55 by ehande            #+#    #+#             */
+/*   Updated: 2021/04/14 21:39:52 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "2d_arr.h"
+#include "ft_arr.h"
+#include <stdio.h>
+#include <unistd.h>
 
-char *get_line(char *line)
+static int len(char *str)
 {
-    char *out;
-    out = malloc(sizeof(char) * 2);
-    out[1] = '\0';
-    out[0] = line[0];
-    return(out);
+    int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
-int main(void)
+int main(int c, char **v)
 {
-    char    **dbl;
-    char    *line;
-    int i;
-
-    i = 0;
-    dbl = new_2d(20);
+    char *line;
+    char *bf;
+    (void)c;
+    (void)v;
     
-    while(dbl[i] == NULL)
-        printf("%s\n", dbl[i++]);
-    return (0);
+    line = NULL;
+    bf = malloc(sizeof(char));
+    while(1)
+    {
+        read(0, bf, 1);
+        if(!make_line(&line, *bf))
+            break;
+    }
+    write(1, line, len(line));
+    while(1);
+    return(0);
 }
