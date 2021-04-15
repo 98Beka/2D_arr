@@ -8,7 +8,7 @@ SRCS =	free_2d.c new_2d.c\
 		make_line.c
 OBJS = $(SRCS:.c=.o)
 
-CC = @gcc -Wall -Wextra -Werror
+CC = gcc -Wall -Wextra -Werror
 AR = @ar -rcs
 
 %.o: %.c $(HRDS)libft.h
@@ -20,7 +20,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 tst: re
-	gcc tst.c $(SRCS) -g
+	$(CC) tst.c $(SRCS) -g
 	rm -f $(OBJS)
 	$(RM) $(NAME)
 

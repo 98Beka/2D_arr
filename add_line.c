@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:00:13 by ehande            #+#    #+#             */
-/*   Updated: 2021/04/15 21:30:29 by ehande           ###   ########.fr       */
+/*   Updated: 2021/04/16 01:28:23 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int len(char **str)
     int	i;
 
 	i = 0;
-	while (*str && (*str)[i])
+	while (str && str[i])
 		i++;
     i += 1;
 	return (i);
