@@ -1,4 +1,4 @@
-NAME = 2d_arr.a
+NAME = ft_arr.a
 
 HDRS = ./
 

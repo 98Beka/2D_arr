@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 20:41:08 by ehande            #+#    #+#             */
-/*   Updated: 2021/04/14 21:30:27 by ehande           ###   ########.fr       */
+/*   Updated: 2021/04/15 21:13:15 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int len(char *str)
     int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str && str[i])
 		i++;
 	return (i);
 }
@@ -30,12 +30,12 @@ int add_l_char(char **line, char ch)
 
     tmp = *line;
     i = len(tmp);
-    i ++;
+    i += 1;
     if(!(out = malloc(sizeof(char) * (i + 1))))
         return (0);
     out[i] = '\0';
     out[--i] = ch;
-    while (tmp[--i])
+    while (i--)
         out[i] = tmp[i];
     free(*line);
     *line = out;
@@ -55,7 +55,7 @@ int add_f_char(char **line, char ch)
         return (0);
     out[i] = '\0';
     --i;
-    while (tmp[--i])
+    while (i--)
         out[i + 1] = tmp[i];
     out[0] = ch;
     free(*line);
