@@ -14,12 +14,10 @@
 
 void free_2d(char ***input)
 {
-    int i;
-
-    i = 0;
-    while ((*input)[i])
-        free((*input)[i++]);
-    if (*input)
-        free(*input);
-    *input = NULL;
+	int	i;
+	
+	i = 0;
+	while ((*input)[i])
+		free((*input)[i++]);
+	**input = NULL;
 }
